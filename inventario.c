@@ -39,8 +39,17 @@ int main() {
                 totalEquipos++;
                 printf("Equipo registrado con exito!\n");
                 break;
-            case 2: 
-                printf("Opcion 2\n"); 
+                case 2:
+                printf("\n--- Mostrar Equipos Registrados ---\n");
+                if (totalEquipos == 0) {
+                printf("No hay equipos registrados.\n");
+                } else {
+                for(int i = 0; i < totalEquipos; i++) {
+                printf("\nCodigo: %d | Nombre: %s | Marca: %s | Precio: %.2f | Estado: %s\n", 
+                inventario[i].codigo, inventario[i].nombre, inventario[i].marca, 
+                inventario[i].precio, inventario[i].estado);
+                }
+                }
                 break;
             case 3: 
                 printf("Opción 3\n"); 
