@@ -24,23 +24,35 @@ int main() {
         scanf("%d", &opcion);
 
         switch(opcion) {
-            case 1: 
-                printf("Opcion 1 en construccion...\n"); 
+            case 1:
+                printf("\n--- Registrar Equipo ---\n");
+                printf("Codigo: ");
+                scanf("%d", &inventario[totalEquipos].codigo);
+                printf("Nombre: ");
+                scanf("%s", inventario[totalEquipos].nombre);
+                printf("Marca: ");
+                scanf("%s", inventario[totalEquipos].marca);
+                printf("Precio: ");
+                scanf("%f", &inventario[totalEquipos].precio);
+                printf("Estado (Ej: Nuevo, Usado): ");
+                scanf("%s", inventario[totalEquipos].estado);
+                totalEquipos++;
+                printf("Equipo registrado con exito!\n");
                 break;
             case 2: 
-                printf("Opcion 2 en construccion...\n"); 
+                printf("Opcion 2\n"); 
                 break;
             case 3: 
-                printf("Modificar equipo (Pendiente)\n"); 
+                printf("Opción 3\n"); 
                 break;
             case 4: 
-                printf("Eliminar equipo (Pendiente)\n"); 
+                printf("Opcion 4\n"); 
                 break;
             case 5: 
-                printf("Saliendo del sistema...\n"); 
+                printf("Opcion 5\n"); 
                 break;
             default: 
-                printf("Opcion invalida.\n");
+                printf("Error\n");
         }
     } while(opcion != 5);
 
